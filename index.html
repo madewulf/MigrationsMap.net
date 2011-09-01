@@ -1,0 +1,332 @@
+<!DOCTYPE HTML>
+<html manidfest="/cache.madnifest">
+<head>
+    <title>Migrations Map</title>
+    <link rel="stylesheet" type="text/css" href="univers-else-font/stylesheet.css" />
+    <script type="text/javascript" src="raphael.js"></script>
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="signals.js"></script>
+    <script type="text/javascript" src="hasher.js"></script>
+    <script type="text/javascript" src="modernizr.geoloc.js"></script>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-1397562-10']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+<body>
+<div id="container">
+<div id="country_select_div">
+    <span id="explanation">Click on the map or pick a country here:</span>
+    <select id="country_select">
+    </select>
+</div>
+<div id="inorout">
+    <span id="in" class="on"><a href="#" class="blackLink">Arrivals</a></span> <span id="out"><a href="#" class="blackLink">Departures</a></span>
+</div>
+
+<div id="canvas_container">
+    <script type="text/javascript">
+        var ten_colors = ["#67000D" , "#A50F15","#CB181D", "#EF3B2C", "#FB6A4A","#FC9272","#FCBBA1", "#FEE0D2", "#FFF5F0","#FFFFFF"];
+        var svg_borders;
+        var current_arrows=[];
+        var current_countries=[];
+        var currentCircles=[];
+        var currentCountry="BEL";
+        var previousCountry = "BEL";
+        var direction = "out";
+        var unselected_color = "#515151";
+        var selected_color = "#999";//"#67E667" ;//"#87ceeb";
+        var border_color = "#999";
+        var arrow_color = "#009CFF"//"#add8e6"; //"#fafad2";
+        var code_to_name ;
+        var code_to_coordinates;
+
+        function parseHash(hash, redrawing){
+            res = the_regexp.exec(hash);
+            if (res)
+            {
+                currentCountry = res[1];
+                if (res[2]=='arrivals')
+                    direction = 'out';
+                else
+                    direction = 'in';
+            }
+            if (redrawing)
+            redraw();
+        }
+
+        function setHashSilently(hash){
+            hasher.changed.active = false; //disable changed signal
+            hasher.setHash(hash); //set hash without dispatching changed signal
+            hasher.changed.active = true; //re-enable signal
+        }
+        function lolatoxy(point){
+            var lo = point[0];
+            var la = point[1];
+            x = (lo+180) * (1200 / 360.0);
+            y = (180 - (la+90)) *  (1200 / 180.0);
+            return {"x":Math.floor(x),
+                    "y":Math.floor(y)
+            };
+        }
+        function redraw()
+        {
+            var other_direction = "in";
+            var hash_direction = "arrivals"
+            if (direction =="in")
+            {
+                other_direction = "out";
+                hash_direction = "departures";
+            }
+            setHashSilently(currentCountry+"/"+hash_direction);
+            removeCurrentDrawings();
+            $("#country_select").val(currentCountry);
+            draw_arrows_and_paint_countries();
+
+            $("#"+direction).removeClass("on");
+            $("#"+other_direction).addClass("on")
+        }
+        
+        if (window.applicationCache){
+            window.applicationCache.onupdateready = function(event){
+                alert("The application is now ready to be used off-line. You can unplug your network cable.")
+            };
+        }
+
+        
+        function color_country(country,color,strokeColor)
+        {
+            var i;
+            var l;
+            if (svg_borders.hasOwnProperty(country))
+                for (i=0, l= svg_borders[country].length;i<l;i++)
+                {
+                    if (strokeColor)
+                        svg_borders[country][i].animate({"fill":color,"stroke":strokeColor,"stroke-width":2},333);
+                    else
+                        svg_borders[country][i].animate({"fill":color,"stroke":border_color,"stroke-width":1},333);
+                }
+        }
+
+        function removeCurrentDrawings()
+        {
+            color_country(previousCountry,unselected_color);
+            var i;
+            var l;
+            for (i=0,l=current_arrows.length;i<l;i++)
+                current_arrows[i].remove();
+            for (i=0,l=currentCircles.length;i<l;i++)
+                currentCircles[i].remove();
+
+            current_arrows=[];
+            for(i=0,l=current_countries.length;i<l;i++)
+                color_country(current_countries[i],unselected_color);
+            current_countries=[]
+        }
+        
+        function get_click_handler(country){
+            return function(){
+                previousCountry = currentCountry;
+                currentCountry = country;
+                redraw();
+            }
+        }
+        
+        function get_over_handler(country){
+            return function(event){
+                color_country(country,selected_color);
+                var country_name =  $("#country_name_popup");
+                country_name.empty();
+                country_name.append(code_to_name[country]);
+                country_name.css("display","block");
+                country_name.css("top",event.clientY);
+                country_name.css("left",Math.min(event.clientX-30,1100));
+            }
+        }
+        
+        function get_out_handler(country){
+            return function(event){
+                var found=false;
+                var i;
+                var l;
+                var country_name = $("#country_name_popup");
+                country_name.css("display","none");
+                for (i=0,l=current_countries.length;i<l;i++)
+                {
+                    if (country === current_countries[i])
+                    {
+                        found=true;
+                        break;
+                    }
+                }
+                if (country==currentCountry)
+                    color_country(country,selected_color,'yellow');
+                else if (found)
+                  color_country(country,ten_colors[i])
+                else
+                    color_country(country,unselected_color);
+            }
+        }
+        
+        function draw_arrows_and_paint_countries()
+        {
+
+            $.getJSON("generated/"+direction+currentCountry+".json", function(data) {
+                $("#countries").empty();
+                $("#country_name").empty()
+                $("#country_name").append(code_to_name[currentCountry]);
+                var counter =0;
+                $.each(data, function(country, val) {
+                    var line;
+                    var i;
+                    var l;
+                    var path;
+                    line = paper.path(val[0]);
+                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td>"+val[1]+'</td><td>'+val[2]+"</td></tr>")
+                    line.attr({stroke:arrow_color,'stroke-width':2,'opacity':0});
+                    line.animate({stroke:arrow_color,'stroke-width':2,'opacity':1},333);
+                    current_arrows.push(line);
+                    color_country(country,ten_colors[counter]);
+                    current_countries.push(country);
+        
+                    var coo = code_to_coordinates[country];
+                    var circle = paper.circle(coo[0], coo[1], 2);
+                    circle.attr("stroke", arrow_color);
+                    circle.attr("fill", arrow_color);
+                    currentCircles.push(circle);
+                    coo = code_to_coordinates[currentCountry];
+                    circle = paper.circle(coo[0], coo[1], 2);
+                    circle.attr("stroke", "yellow");
+                    circle.attr("fill", "yellow");
+                    currentCircles.push(circle);
+                    counter++;
+                });
+
+                color_country(currentCountry,selected_color,'yellow');
+            });
+        }
+
+        var paper = new Raphael(document.getElementById('canvas_container'), 1200, 600);
+        if (Modernizr.geolocation) {
+
+            navigator.geolocation.getCurrentPosition(function(data){
+                console.log(data);
+                console.log(data.coords);
+            });
+        }
+        $.getJSON('world_svg_paths_by_code.json', function(data) {
+            svg_borders = {};
+            $.each(data, function(country, val) {
+                svg_borders[country]=[]
+                var line;
+                var i;
+                var path;
+                for (var i=0, l=val.length;i<l;i++)
+                {
+                    line = paper.path(val[i]);
+                    line.attr({stroke:border_color,'stroke-width':1,'fill':unselected_color});
+                    line.country=country;
+                    $(line.node).click( get_click_handler(country));
+                    $(line.node).mousemove( get_over_handler(country));
+                    $(line.node).mouseout( get_out_handler(country));
+
+                    svg_borders[country].push(line);
+                }
+            });
+             $.getJSON("code_to_name.json", function(data) {
+                 code_to_name = data;
+                 var country_select = $("#country_select");
+                 $.each(data, function(code, name) {
+                     var selected='';
+                     if (code=="BEL")
+                        selected='selected="selected"';
+                     country_select.append("<option value='"+code+"'" +selected+">"+name+'</option>');
+                 });
+                 country_select.change(function(e){
+                    previousCountry = currentCountry;
+                    currentCountry = $(this).val();
+                    redraw();
+                 });
+                 //draw_arrows_and_paint_countries();
+             });
+            $.getJSON("code_to_coordinates.json", function(data) {
+                code_to_coordinates = data;
+                redraw();
+                var c = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+                c.attr({"stroke":"white"});
+                c.animate({r: 30,stroke:"yellow"}, 333, function(){
+                    var d = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+                    c.animate({r: 60,stroke:"white"}, 333);
+                    d.attr({"stroke":"white"});
+                    d.animate({r: 30,stroke:"yellow"},333, function(){
+                        var e = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+                        e.attr({"stroke":"white"});
+                        e.animate({r: 30,stroke:"yellow"}, 333);
+                        c.animate({r: 90,stroke:"yellow"}, 333);
+                        d.animate({r: 60,stroke:"white"},333, function(){
+                            c.remove();
+                            d.remove();
+                            e.remove();
+                        });
+                    });
+
+                });
+            });
+
+
+        });
+        $(function(){
+            $("#in").click(function(e){
+               e.preventDefault();
+               direction='out';
+               redraw();
+            });
+            $("#out").click(function(e){
+               e.preventDefault();
+
+               direction='in';
+               redraw();
+            });
+
+        });
+        var the_regexp = /^([^\/\?]+)\/?(\w*)$/i;
+
+
+        hasher.initialized.add(parseHash);
+        hasher.changed.add(parseHash, true);
+        hasher.init(); //start listening for history change
+    </script>
+</div>
+<div id="legend">
+    <h2 id="country_name">
+    </h2>
+        <table id="countries" width="100%">
+        </table>
+</div>
+<div id="country_name_popup">
+</div>
+    <div id="html5badge">
+        <a href="http://www.w3.org/html/logo/">
+        <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-device-graphics-semantics-storage.png" width="261" height="64" alt="HTML5 Powered with CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage">
+        </a>
+    </div>
+<div id="credits">
+    <h1>MigrationsMap.net</h1><br/>  Programmed by <a href="http://twitter.com/madewulf">Martin De Wulf</a>  based on <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">the Global Migrant Origin Database</a> Version 4 (updated March 2007) - <a href="http://multitasked.net/migrationsmap.net">Learn more ...</a>
+</div>
+<div id="YouAreHere">
+    You Are Here
+</div>
+</div>
+
+</body>
+</html>

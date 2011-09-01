@@ -1,0 +1,131 @@
+body {
+    background-image: url(gray_texture.jpg); background-repeat: repeat;
+    color : #f5f5f5; ; /*#515151;*/
+    font-family: 'UniversElseRegular', Arial, sans-serif;
+}
+
+#legend {
+    width:225px;
+    border-radius: 10px 10px 10px 10px;
+    border: 3px solid gray;
+    position: absolute;
+    top: 333px;
+    left: 0px;
+    margin: 10px;
+    background: none repeat scroll 0 0 lightgray;
+    padding: 10px;
+    font-size:0.8em;
+    background-opacity: 0.5;
+    color: black;
+
+}
+
+#countries {
+    width: 100%;
+}
+
+#country_name_popup {
+    color: black;
+    border-radius: 5px;
+    border: 1px solid #515151;
+    background: lightgray;
+    margin: 10px;
+    padding: 10px;
+    font-size:0.8em;
+
+    position:absolute;
+    top: 280px;
+    left: 10px;
+
+    display:none;
+
+}
+#country_select_div
+{
+   padding: 10px;
+}
+
+#container{
+    margin: auto;
+    width:1200px;
+    position: relative;
+}
+
+#html5badge
+{
+    float:right;
+    padding: 10px;
+    margin-top: -80px;
+}
+
+h2 {
+   margin: -7px -17px 6px -0.8px
+}
+
+#inorout {
+    color: black;
+    border-radius: 5px;
+    border: 3px solid gray;
+    background: lightgray;
+    margin: 10px;
+    padding: 10px;
+    font-size:0.8em;
+    float: left;
+    width: 184px;
+    height:20px;
+    /*position:absolute;*/
+}
+
+a.blackLink {
+    color:black
+}
+#country_select_div{
+       color: black;
+    border-radius: 5px;
+    border: 3px solid gray;
+    background: lightgray;
+    margin: 10px;
+    padding: 10px;
+    font-size:0.8em;
+    float: left;
+    height: 20px;
+    /*position:absolute;*/
+
+}
+
+#inorout span {
+    margin-left: 10px;
+    padding-left: 19px;
+    padding-bottom: 9px;
+}
+#inorout span.on {
+    background-image: url("right_blue_arrow.png");
+    background-position: 0 31%;
+    background-repeat: no-repeat;
+}
+
+a {
+    color:#f5f5f5;
+}
+
+
+
+h1 {
+    color: #999999;
+    display: inline;
+}
+
+#credits {
+    margin-top: -36px;
+    margin-left: 10px;
+}
+#YouAreHere {
+    display: block;
+    position:absolute;
+    background-color: black;
+    margin: 10px;
+    width: 42px;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
