@@ -1,7 +1,16 @@
 <!DOCTYPE HTML>
-<html manifest="/cache.manifest">
+<html madnifest="/cdache.manifest">
 <head>
-    <title>Migrations Map</title>
+    <title>Migrations Map : Where are migrants coming from ? Where have migrants left ? </title>
+    <meta property="og:title" content="MigrationsMap.net"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://migrationsmap.net/"/>
+    <meta property="og:image" content="http://migrationsmap.net/facebook-image.png"/>
+    <meta property="og:site_name" content="MigrationsMap.net"/>
+    <meta property="fb:admins" content="548900828"/>
+
+    <meta property="og:description"
+          content="Migrations Map : Where are migrants coming from ? Where have migrants left ?"/>
     <link rel="stylesheet" type="text/css" href="univers-else-font/stylesheet.css" />
     <script type="text/javascript" src="raphael.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
@@ -25,6 +34,11 @@
 </head>
 <body>
 <div id="container">
+<div id="title">
+    <h1 style="color:white;">MigrationsMap.net</h1>
+    <p style="font-size:13px;padding: 2px 0px 0px 0px;">Where are migrants coming from ? Where have migrants left ?</p>
+    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmigrationsmap.net&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; padding-top:10px;" allowTransparency="true"></iframe>
+</div>
 <div id="country_select_div">
     <span id="explanation">Click on the map or pick a country here:</span>
     <select id="country_select">
@@ -78,6 +92,28 @@
             return {"x":Math.floor(x),
                     "y":Math.floor(y)
             };
+        }
+        function flashCircles()
+        {
+            var c = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+            c.attr({"stroke":"white"});
+            c.animate({r: 30,stroke:"yellow"}, 333, function(){
+                var d = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+                c.animate({r: 60,stroke:"white"}, 333);
+                d.attr({"stroke":"white"});
+                d.animate({r: 30,stroke:"yellow"},333, function(){
+                    var e = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+                    e.attr({"stroke":"white"});
+                    e.animate({r: 30,stroke:"yellow"}, 333);
+                    c.animate({r: 90,stroke:"yellow"}, 333);
+                    d.animate({r: 60,stroke:"white"},333, function(){
+                        c.remove();
+                        d.remove();
+                        e.remove();
+                    });
+                });
+
+            });
         }
         function redraw()
         {
@@ -153,7 +189,19 @@
                 country_name.css("left",Math.min(event.clientX-30,1100));
             }
         }
-        
+        function insertDecimalPoints(s)
+        {
+            var l = s.length;
+            var res = ""+s[0];
+            for (var i=1;i<l-1;i++)
+            {
+                if ((l-i)%3==0)
+                    res+= ".";
+                res+=s[i];
+            }
+            res+=s[l-1];
+            return res;
+        }
         function get_out_handler(country){
             return function(event){
                 var found=false;
@@ -192,7 +240,7 @@
                     var l;
                     var path;
                     line = paper.path(val[0]);
-                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td>"+val[1]+'</td><td>'+val[2]+"</td></tr>")
+                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td>&nbsp;"+val[1]+'</td><td style="text-align: right;">'+insertDecimalPoints(val[2])+"</td></tr>")
                     line.attr({stroke:arrow_color,'stroke-width':2,'opacity':0});
                     line.animate({stroke:arrow_color,'stroke-width':2,'opacity':1},333);
                     current_arrows.push(line);
@@ -262,25 +310,6 @@
             $.getJSON("code_to_coordinates.json", function(data) {
                 code_to_coordinates = data;
                 redraw();
-                var c = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
-                c.attr({"stroke":"white"});
-                c.animate({r: 30,stroke:"yellow"}, 333, function(){
-                    var d = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
-                    c.animate({r: 60,stroke:"white"}, 333);
-                    d.attr({"stroke":"white"});
-                    d.animate({r: 30,stroke:"yellow"},333, function(){
-                        var e = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
-                        e.attr({"stroke":"white"});
-                        e.animate({r: 30,stroke:"yellow"}, 333);
-                        c.animate({r: 90,stroke:"yellow"}, 333);
-                        d.animate({r: 60,stroke:"white"},333, function(){
-                            c.remove();
-                            d.remove();
-                            e.remove();
-                        });
-                    });
-
-                });
             });
 
 
@@ -315,13 +344,13 @@
 </div>
 <div id="country_name_popup">
 </div>
-    <div id="html5badge">
+  <div id="html5badge">
         <a href="http://www.w3.org/html/logo/">
         <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-device-graphics-semantics-storage.png" width="261" height="64" alt="HTML5 Powered with CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage">
         </a>
     </div>
 <div id="credits">
-    <h1>MigrationsMap.net</h1><br/>  Programmed by <a href="http://twitter.com/madewulf">Martin De Wulf</a>  based on <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">the Global Migrant Origin Database</a> Version 4 (updated March 2007) - <a href="http://multitasked.net/migrationsmap.net">Learn more ...</a>
+      Visualization by <a href="http://twitter.com/madewulf">Martin De Wulf</a>  based on <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">the Global Migrant Origin Database</a> Version 4 (updated March 2007) - <a href="http://multitasked.net/migrationsmap.net">Learn more</a>
 </div>
 
 </div>
