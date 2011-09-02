@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="27" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.5121951">
+            <state line="149" column="32" selection-start="6427" selection-end="6431" vertical-scroll-proportion="-3.76">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cache.manifest" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="cache.manifest" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cache.manifest">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="10" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
+            <state line="17" column="50" selection-start="535" selection-end="535" vertical-scroll-proportion="0.54603857">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="13" selection-start="2070" selection-end="2070" vertical-scroll-proportion="31.26923">
+            <state line="106" column="14" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-8.269231">
               <folding />
             </state>
           </provider>
@@ -126,10 +126,10 @@
         <option value="$PROJECT_DIR$/code_to_name.json" />
         <option value="$PROJECT_DIR$/arrowcomputer2.py" />
         <option value="$PROJECT_DIR$/CNAME" />
-        <option value="$PROJECT_DIR$/cache.manifest" />
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/cache.manifest" />
       </list>
     </option>
   </component>
@@ -288,14 +288,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20700637" sideWeight="0.7957317" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20700637" sideWeight="0.7957317" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -414,13 +414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache.manifest">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="10" selection-start="355" selection-end="355" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/hasher.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -437,14 +430,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="13" selection-start="2070" selection-end="2070" vertical-scroll-proportion="31.26923">
+        <state line="106" column="14" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-8.269231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="27" selection-start="1690" selection-end="1690" vertical-scroll-proportion="0.5121951">
+        <state line="149" column="32" selection-start="6427" selection-end="6431" vertical-scroll-proportion="-3.76">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache.manifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="50" selection-start="535" selection-end="535" vertical-scroll-proportion="0.54603857">
           <folding />
         </state>
       </provider>

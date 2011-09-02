@@ -102,10 +102,9 @@ body {
 
 #html5badge
 {
-    float:right;
-    padding: 10px;
-    margin-top: -80px;
-    z-index: 10;
+    position:absolute;
+    left:1000px;
+    top:650px;
 }
 
 h2 {
@@ -179,6 +178,7 @@ h1 {
 }
 #credits {
     padding: 10px;
+    margin-top: -20px;
 }
 
 td {

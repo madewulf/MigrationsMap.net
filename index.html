@@ -1,16 +1,19 @@
 <!DOCTYPE HTML>
-<html madnifest="/cdache.manifest">
+<html manifest="/cache.manifest" itemscope itemtype="http://schema.org/Visualization">
 <head>
-    <title>Migrations Map : Where are migrants coming from ? Where have migrants left ? </title>
+    <title>Migrations Map : Where are migrants coming from? Where have migrants left? </title>
     <meta property="og:title" content="MigrationsMap.net"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="http://migrationsmap.net/"/>
     <meta property="og:image" content="http://migrationsmap.net/facebook-image.png"/>
     <meta property="og:site_name" content="MigrationsMap.net"/>
     <meta property="fb:admins" content="548900828"/>
+    <meta property="og:description" content="Migrations Map : Where are migrants coming from? Where have migrants left?"/>
 
-    <meta property="og:description"
-          content="Migrations Map : Where are migrants coming from ? Where have migrants left ?"/>
+    <meta itemprop="name" content="MigrationsMap.net">
+    <meta itemprop="description" content="Migrations Map : Where are migrants coming from? Where have migrants left?">
+    <meta itemprop="image" content="http://migrationsmap.net/facebook-image.png">
+
     <link rel="stylesheet" type="text/css" href="univers-else-font/stylesheet.css" />
     <script type="text/javascript" src="raphael.js"></script>
     <script type="text/javascript" src="jquery.js"></script>
@@ -31,13 +34,23 @@
   })();
 
 </script>
+<script type="text/javascript">
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/plusone.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>
 </head>
 <body>
 <div id="container">
 <div id="title">
     <h1 style="color:white;">MigrationsMap.net</h1>
-    <p style="font-size:13px;padding: 2px 0px 0px 0px;">Where are migrants coming from ? Where have migrants left ?</p>
+    <p style="font-size:13px;padding: 2px 0px 0px 0px;">Where are migrants coming from? Where have migrants left?</p>
+
     <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmigrationsmap.net&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; padding-top:10px;" allowTransparency="true"></iframe>
+    <g:plusone size="medium"></g:plusone>
+
 </div>
 <div id="country_select_div">
     <span id="explanation">Click on the map or pick a country here:</span>
@@ -64,7 +77,8 @@
         var arrow_color = "#009CFF"//"#add8e6"; //"#fafad2";
         var code_to_name ;
         var code_to_coordinates;
-
+        var userLatitude;
+        var userLongitude;
         function parseHash(hash, redrawing){
             res = the_regexp.exec(hash);
             if (res)
@@ -85,8 +99,8 @@
             hasher.changed.active = true; //re-enable signal
         }
         function lolatoxy(point){
-            var lo = point[0];
-            var la = point[1];
+            var lo = point.longitude;
+            var la = point.latitude;
             x = (lo+180) * (1200 / 360.0);
             y = (180 - (la+90)) *  (1200 / 180.0);
             return {"x":Math.floor(x),
@@ -95,14 +109,14 @@
         }
         function flashCircles()
         {
-            var c = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+            var c = paper.circle(userLongitude,userLatitude , 1);
             c.attr({"stroke":"white"});
             c.animate({r: 30,stroke:"yellow"}, 333, function(){
-                var d = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+                var d = paper.circle(userLongitude,userLatitude , 1);
                 c.animate({r: 60,stroke:"white"}, 333);
                 d.attr({"stroke":"white"});
                 d.animate({r: 30,stroke:"yellow"},333, function(){
-                    var e = paper.circle(code_to_coordinates["BEL"][0],code_to_coordinates["BEL"][1] , 1);
+                    var e = paper.circle(userLongitude,userLatitude , 1);
                     e.attr({"stroke":"white"});
                     e.animate({r: 30,stroke:"yellow"}, 333);
                     c.animate({r: 90,stroke:"yellow"}, 333);
@@ -134,8 +148,8 @@
         }
         
         if (window.applicationCache){
-            window.applicationCache.onupdateready = function(event){
-                alert("The application is now ready to be used off-line. You can unplug your network cable.")
+            window.applicationCache.oncached = function(event){
+                alert("The application is now ready to be used off-line. You can type the url and access the map even withou internet access.")
             };
         }
 
@@ -265,13 +279,7 @@
         }
 
         var paper = new Raphael(document.getElementById('canvas_container'), 1200, 600);
-        if (Modernizr.geolocation) {
 
-            navigator.geolocation.getCurrentPosition(function(data){
-                console.log(data);
-                console.log(data.coords);
-            });
-        }
         $.getJSON('world_svg_paths_by_code.json', function(data) {
             svg_borders = {};
             $.each(data, function(country, val) {
@@ -326,7 +334,17 @@
                direction='in';
                redraw();
             });
+            if (Modernizr.geolocation) {
 
+                navigator.geolocation.getCurrentPosition(function(data){
+                    console.log(data);
+                    console.log(data.coords);
+                    var userCoordinates = lolatoxy(data.coords);
+                    userLatitude = userCoordinates.y;
+                    userLongitude = userCoordinates.x;
+                    flashCircles();
+                });
+            }
         });
         var the_regexp = /^([^\/\?]+)\/?(\w*)$/i;
 
@@ -345,10 +363,11 @@
 <div id="country_name_popup">
 </div>
   <div id="html5badge">
-        <a href="http://www.w3.org/html/logo/">
+      <a href="http://www.w3.org/html/logo/">
         <img src="http://www.w3.org/html/logo/badge/html5-badge-h-css3-device-graphics-semantics-storage.png" width="261" height="64" alt="HTML5 Powered with CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Device Access, Graphics, 3D &amp; Effects, Semantics, and Offline &amp; Storage">
-        </a>
-    </div>
+      </a>
+  </div>
+
 <div id="credits">
       Visualization by <a href="http://twitter.com/madewulf">Martin De Wulf</a>  based on <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">the Global Migrant Origin Database</a> Version 4 (updated March 2007) - <a href="http://multitasked.net/migrationsmap.net">Learn more</a>
 </div>
