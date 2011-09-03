@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html manifest="/cache.manifest" itemscope itemtype="http://schema.org/Visualization">
+<html manifest="/cache.madnifest" itemscope itemtype="http://schema.org/Visualization">
 <head>
     <title>Migrations Map : Where are migrants coming from? Where have migrants left? </title>
     <meta property="og:title" content="MigrationsMap.net"/>
@@ -48,9 +48,10 @@
     <h1 style="color:white;">MigrationsMap.net</h1>
     <p style="font-size:13px;padding: 2px 0px 0px 0px;">Where are migrants coming from? Where have migrants left?</p>
 
-    <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmigrationsmap.net&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; padding-top:10px;" allowTransparency="true"></iframe>
-    <g:plusone size="medium"></g:plusone>
-
+</div>
+<div id="social">
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmigrationsmap.net&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; padding-top:10px;" allowTransparency="true"></iframe>
+<!--<g:plusone size="medium"></g:plusone>-->
 </div>
 <div id="country_select_div">
     <span id="explanation">Click on the map or pick a country here:</span>
@@ -101,8 +102,8 @@
         function lolatoxy(point){
             var lo = point.longitude;
             var la = point.latitude;
-            x = (lo+180) * (1200 / 360.0);
-            y = (180 - (la+90)) *  (1200 / 180.0);
+            var x = (lo+180) * (1200 / 360.0);
+            var y = (180 - (la+90)) *  (600.0 / 180.0);
             return {"x":Math.floor(x),
                     "y":Math.floor(y)
             };
@@ -149,7 +150,7 @@
         
         if (window.applicationCache){
             window.applicationCache.oncached = function(event){
-                alert("The application is now ready to be used off-line. You can type the url and access the map even withou internet access.")
+                alert("The application is now ready to be used off-line. You can type the url and access the map even without internet access.")
             };
         }
 
@@ -254,7 +255,7 @@
                     var l;
                     var path;
                     line = paper.path(val[0]);
-                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td>&nbsp;"+val[1]+'</td><td style="text-align: right;">'+insertDecimalPoints(val[2])+"</td></tr>")
+                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td class='country_name'>"+val[1]+'</td><td style="text-align: right;">'+insertDecimalPoints(val[2])+"</td></tr>")
                     line.attr({stroke:arrow_color,'stroke-width':2,'opacity':0});
                     line.animate({stroke:arrow_color,'stroke-width':2,'opacity':1},333);
                     current_arrows.push(line);
@@ -334,17 +335,14 @@
                direction='in';
                redraw();
             });
-            if (Modernizr.geolocation) {
-
+            $("#geoloc_me").click(function(e){
                 navigator.geolocation.getCurrentPosition(function(data){
-                    console.log(data);
-                    console.log(data.coords);
                     var userCoordinates = lolatoxy(data.coords);
                     userLatitude = userCoordinates.y;
                     userLongitude = userCoordinates.x;
                     flashCircles();
                 });
-            }
+            });
         });
         var the_regexp = /^([^\/\?]+)\/?(\w*)$/i;
 
@@ -371,7 +369,9 @@
 <div id="credits">
       Visualization by <a href="http://twitter.com/madewulf">Martin De Wulf</a>  based on <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">the Global Migrant Origin Database</a> Version 4 (updated March 2007) - <a href="http://multitasked.net/migrationsmap.net">Learn more</a>
 </div>
-
+<div id="geoloc_me">
+    Where am I ? 
+</div>
 </div>
 
 </body>

@@ -66,7 +66,17 @@ body {
     font-size:0.8em;
     background-opacity: 0.5;
     color: black;
+}
 
+#geoloc_me {
+    position : absolute;
+    top: 300px;
+    left: 0px;
+}
+#social {
+    position : absolute;
+    top: 64px;
+    left: 10px;
 }
 
 #countries {
@@ -103,8 +113,8 @@ body {
 #html5badge
 {
     position:absolute;
-    left:1000px;
-    top:650px;
+    left: 958px;
+    top: 615px;
 }
 
 h2 {
@@ -179,8 +189,13 @@ h1 {
 #credits {
     padding: 10px;
     margin-top: -20px;
+    font-size:0.8em;
 }
 
 td {
     height: 1.5em;
+}
+td.country_name{
+    height: 1.5em;
+    padding-left:1em;
 }

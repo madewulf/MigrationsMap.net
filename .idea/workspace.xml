@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="149" column="32" selection-start="6427" selection-end="6431" vertical-scroll-proportion="-3.76">
+            <state line="53" column="44" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.5069767">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cache.manifest" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="cache.manifest" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache.manifest">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="50" selection-start="535" selection-end="535" vertical-scroll-proportion="0.54603857">
+            <state line="390" column="16" selection-start="8896" selection-end="8898" vertical-scroll-proportion="-5.9615383">
               <folding />
             </state>
           </provider>
@@ -62,7 +62,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="106" column="14" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-8.269231">
+            <state line="98" column="8" selection-start="1991" selection-end="1992" vertical-scroll-proportion="-5.9615383">
               <folding />
             </state>
           </provider>
@@ -127,9 +127,9 @@
         <option value="$PROJECT_DIR$/arrowcomputer2.py" />
         <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/LICENSE" />
+        <option value="$PROJECT_DIR$/cache.manifest" />
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/cache.manifest" />
       </list>
     </option>
   </component>
@@ -428,23 +428,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/cache.manifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="390" column="16" selection-start="8896" selection-end="8898" vertical-scroll-proportion="-5.9615383">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="106" column="14" selection-start="2052" selection-end="2052" vertical-scroll-proportion="-8.269231">
+        <state line="98" column="8" selection-start="1991" selection-end="1992" vertical-scroll-proportion="-5.9615383">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="149" column="32" selection-start="6427" selection-end="6431" vertical-scroll-proportion="-3.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cache.manifest">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="50" selection-start="535" selection-end="535" vertical-scroll-proportion="0.54603857">
+        <state line="53" column="44" selection-start="2879" selection-end="2879" vertical-scroll-proportion="0.5069767">
           <folding />
         </state>
       </provider>
