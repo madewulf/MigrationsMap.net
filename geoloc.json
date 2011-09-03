@@ -825,8 +825,8 @@
         {
             "geometry": {
                 "location": {
-                    "lat": 22.296222,
-                    "lng": 114.171447
+                    "lat": -6.36903,
+                    "lng": 34.88882
                 },
                 "viewport": {
                     "northeast": {
@@ -3961,8 +3961,8 @@
                 "location_type": "APPROXIMATE",
                 "bounds": {
                     "northeast": {
-                        "lat": 35.00065900000001,
-                        "lng": -80.751429
+                        "lat": 41.70998,
+                        "lng": 44.79300
                     },
                     "southwest": {
                         "lat": 30.3555909,

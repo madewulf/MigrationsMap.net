@@ -26,7 +26,16 @@
       <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="25" selection-start="41" selection-end="41" vertical-scroll-proportion="0.034883723">
+            <state line="372" column="62" selection-start="15442" selection-end="15442" vertical-scroll-proportion="0.597561">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="geoloc.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/geoloc.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3964" column="39" selection-start="123128" selection-end="123128" vertical-scroll-proportion="-7.269231">
               <folding />
             </state>
           </provider>
@@ -35,7 +44,7 @@
       <file leaf-file-name="cache.manifest" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cache.manifest">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="390" column="16" selection-start="8896" selection-end="8898" vertical-scroll-proportion="-5.9615383">
+            <state line="20" column="10" selection-start="567" selection-end="567" vertical-scroll-proportion="-11.538462">
               <folding />
             </state>
           </provider>
@@ -62,7 +71,7 @@
       <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="8" selection-start="1991" selection-end="1992" vertical-scroll-proportion="-5.9615383">
+            <state line="98" column="8" selection-start="1992" selection-end="1993" vertical-scroll-proportion="-5.9615383">
               <folding />
             </state>
           </provider>
@@ -119,7 +128,6 @@
         <option value="$PROJECT_DIR$/geojsontosvg.py" />
         <option value="$PROJECT_DIR$/reconciliation.json" />
         <option value="$PROJECT_DIR$/server.py" />
-        <option value="$PROJECT_DIR$/geoloc.json" />
         <option value="$PROJECT_DIR$/associate_map_to_db.py" />
         <option value="$PROJECT_DIR$/world_svg_paths_by_code.json" />
         <option value="$PROJECT_DIR$/parser.py" />
@@ -127,8 +135,9 @@
         <option value="$PROJECT_DIR$/arrowcomputer2.py" />
         <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/LICENSE" />
-        <option value="$PROJECT_DIR$/cache.manifest" />
         <option value="$PROJECT_DIR$/main.css" />
+        <option value="$PROJECT_DIR$/geoloc.json" />
+        <option value="$PROJECT_DIR$/cache.manifest" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -288,14 +297,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1280" height="774" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20700637" sideWeight="0.7957317" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20700637" sideWeight="0.7957317" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -351,11 +360,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/countrieslatlong.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/world_svg_paths.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="80383" selection-start="24265" selection-end="80383" vertical-scroll-proportion="-0.0" />
@@ -428,23 +432,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cache.manifest">
+    <entry file="file://$PROJECT_DIR$/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="390" column="16" selection-start="8896" selection-end="8898" vertical-scroll-proportion="-5.9615383">
+        <state line="98" column="8" selection-start="1992" selection-end="1993" vertical-scroll-proportion="-5.9615383">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/geoloc.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="8" selection-start="1991" selection-end="1992" vertical-scroll-proportion="-5.9615383">
+        <state line="3964" column="39" selection-start="123128" selection-end="123128" vertical-scroll-proportion="-7.269231">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cache.manifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="10" selection-start="567" selection-end="567" vertical-scroll-proportion="-11.538462">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="25" selection-start="41" selection-end="41" vertical-scroll-proportion="0.034883723">
+        <state line="372" column="62" selection-start="15442" selection-end="15442" vertical-scroll-proportion="0.597561">
           <folding />
         </state>
       </provider>
