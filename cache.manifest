@@ -1,13 +1,18 @@
 CACHE MANIFEST
-#rev 8
+#rev 11
 raphael.js
-jquery.js
+jquery-ui-1.8.16.custom/js/jquery-1.6.2.min.js
+jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js
+jquery-ui-1.8.16.custom/css/ui-darkness/jquery-ui-1.8.16.custom.css
+jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-icons_cccccc_256x240.png
+/jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-bg_glass_20_555555_1x400.png
 modernizr.geoloc.js
 main.css
 world_svg_paths_by_code.json
 code_to_name.json
 code_to_coordinates.json
 gray_texture.jpg
+right_blue_arrow.png
 favicon.ico
 http://www.w3.org/html/logo/badge/html5-badge-h-css3-device-graphics-semantics-storage.png
 http://www.google-analytics.com/ga.js

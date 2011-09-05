@@ -1,7 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a7e36eec-8b8b-4db6-9ec4-a841a0f638cd" name="Default" comment="" />
+    <list default="true" id="a7e36eec-8b8b-4db6-9ec4-a841a0f638cd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/arrowcomputer2.py" afterPath="$PROJECT_DIR$/arrowcomputer2.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache.manifest" afterPath="$PROJECT_DIR$/cache.manifest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_to_coordinates.json" afterPath="$PROJECT_DIR$/code_to_coordinates.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inAFG.json" afterPath="$PROJECT_DIR$/generated/inAFG.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inAND.json" afterPath="$PROJECT_DIR$/generated/inAND.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inBDI.json" afterPath="$PROJECT_DIR$/generated/inBDI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inBGD.json" afterPath="$PROJECT_DIR$/generated/inBGD.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inBWA.json" afterPath="$PROJECT_DIR$/generated/inBWA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inCOG.json" afterPath="$PROJECT_DIR$/generated/inCOG.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inCOM.json" afterPath="$PROJECT_DIR$/generated/inCOM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inDNK.json" afterPath="$PROJECT_DIR$/generated/inDNK.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inGRC.json" afterPath="$PROJECT_DIR$/generated/inGRC.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inKEN.json" afterPath="$PROJECT_DIR$/generated/inKEN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inLSO.json" afterPath="$PROJECT_DIR$/generated/inLSO.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inMLI.json" afterPath="$PROJECT_DIR$/generated/inMLI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inMOZ.json" afterPath="$PROJECT_DIR$/generated/inMOZ.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inMWI.json" afterPath="$PROJECT_DIR$/generated/inMWI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inNAM.json" afterPath="$PROJECT_DIR$/generated/inNAM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inPAK.json" afterPath="$PROJECT_DIR$/generated/inPAK.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inPYF.json" afterPath="$PROJECT_DIR$/generated/inPYF.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inRWA.json" afterPath="$PROJECT_DIR$/generated/inRWA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inSUR.json" afterPath="$PROJECT_DIR$/generated/inSUR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inSVN.json" afterPath="$PROJECT_DIR$/generated/inSVN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inSWZ.json" afterPath="$PROJECT_DIR$/generated/inSWZ.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inSYC.json" afterPath="$PROJECT_DIR$/generated/inSYC.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inTKM.json" afterPath="$PROJECT_DIR$/generated/inTKM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inTUR.json" afterPath="$PROJECT_DIR$/generated/inTUR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inTZA.json" afterPath="$PROJECT_DIR$/generated/inTZA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inUGA.json" afterPath="$PROJECT_DIR$/generated/inUGA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inUZB.json" afterPath="$PROJECT_DIR$/generated/inUZB.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inZMB.json" afterPath="$PROJECT_DIR$/generated/inZMB.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outAGO.json" afterPath="$PROJECT_DIR$/generated/outAGO.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outAIA.json" afterPath="$PROJECT_DIR$/generated/outAIA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outBWA.json" afterPath="$PROJECT_DIR$/generated/outBWA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outETH.json" afterPath="$PROJECT_DIR$/generated/outETH.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outFJI.json" afterPath="$PROJECT_DIR$/generated/outFJI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outFSM.json" afterPath="$PROJECT_DIR$/generated/outFSM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outGRC.json" afterPath="$PROJECT_DIR$/generated/outGRC.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outGUF.json" afterPath="$PROJECT_DIR$/generated/outGUF.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outJAM.json" afterPath="$PROJECT_DIR$/generated/outJAM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outJOR.json" afterPath="$PROJECT_DIR$/generated/outJOR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outKEN.json" afterPath="$PROJECT_DIR$/generated/outKEN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outKGZ.json" afterPath="$PROJECT_DIR$/generated/outKGZ.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outLBN.json" afterPath="$PROJECT_DIR$/generated/outLBN.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outLSO.json" afterPath="$PROJECT_DIR$/generated/outLSO.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outMLI.json" afterPath="$PROJECT_DIR$/generated/outMLI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outMOZ.json" afterPath="$PROJECT_DIR$/generated/outMOZ.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outMWI.json" afterPath="$PROJECT_DIR$/generated/outMWI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outNER.json" afterPath="$PROJECT_DIR$/generated/outNER.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outRWA.json" afterPath="$PROJECT_DIR$/generated/outRWA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outSAU.json" afterPath="$PROJECT_DIR$/generated/outSAU.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outSYC.json" afterPath="$PROJECT_DIR$/generated/outSYC.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outTUR.json" afterPath="$PROJECT_DIR$/generated/outTUR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outTZA.json" afterPath="$PROJECT_DIR$/generated/outTZA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outUGA.json" afterPath="$PROJECT_DIR$/generated/outUGA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outZAF.json" afterPath="$PROJECT_DIR$/generated/outZAF.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outZMB.json" afterPath="$PROJECT_DIR$/generated/outZMB.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outZWE.json" afterPath="$PROJECT_DIR$/generated/outZWE.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+    </list>
     <ignored path="migrationmap.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,73 +84,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/index.html">
+      <file leaf-file-name="blog.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/blog.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="55" selection-start="2532" selection-end="2532" vertical-scroll-proportion="0.18536586">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="geoloc.json" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geoloc.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3964" column="39" selection-start="123128" selection-end="123128" vertical-scroll-proportion="-7.269231">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cache.manifest" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cache.manifest">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="10" selection-start="567" selection-end="567" vertical-scroll-proportion="-11.538462">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CNAME" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CNAME">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="source.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/source.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="0" selection-start="473" selection-end="503" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="8" selection-start="1992" selection-end="1993" vertical-scroll-proportion="-5.9615383">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LICENSE" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LICENSE">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parser.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/parser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="34" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0">
+            <state line="11" column="17" selection-start="233" selection-end="233" vertical-scroll-proportion="-6.875">
               <folding />
             </state>
           </provider>
@@ -98,16 +96,34 @@
       <file leaf-file-name="arrowcomputer2.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/arrowcomputer2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="28" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
+            <state line="25" column="23" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="geojsontosvg.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/geojsontosvg.py">
+      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/jquery.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="38" selection-end="213" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="393" column="0" selection-start="16366" selection-end="16366" vertical-scroll-proportion="0.7606383">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cache.manifest" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cache.manifest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="7" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.5769231">
               <folding />
             </state>
           </provider>
@@ -120,10 +136,13 @@
       <setting name="OPEN_NEW_TAB" value="false" />
     </FindUsagesManager>
   </component>
+  <component name="Git.Settings">
+    <option name="CHECKOUT_INCLUDE_TAGS" value="false" />
+    <option name="UPDATE_CHANGES_POLICY" value="STASH" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/world.js" />
         <option value="$PROJECT_DIR$/jquery.js" />
         <option value="$PROJECT_DIR$/geojsontosvg.py" />
         <option value="$PROJECT_DIR$/reconciliation.json" />
@@ -132,11 +151,12 @@
         <option value="$PROJECT_DIR$/world_svg_paths_by_code.json" />
         <option value="$PROJECT_DIR$/parser.py" />
         <option value="$PROJECT_DIR$/code_to_name.json" />
-        <option value="$PROJECT_DIR$/arrowcomputer2.py" />
         <option value="$PROJECT_DIR$/CNAME" />
         <option value="$PROJECT_DIR$/LICENSE" />
         <option value="$PROJECT_DIR$/main.css" />
         <option value="$PROJECT_DIR$/geoloc.json" />
+        <option value="$PROJECT_DIR$/blog.html" />
+        <option value="$PROJECT_DIR$/arrowcomputer2.py" />
         <option value="$PROJECT_DIR$/cache.manifest" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
@@ -184,6 +204,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="migrationmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrationmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrationmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jquery-ui-1.8.16.custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrationmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrationmap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jquery-ui-1.8.16.custom" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -300,11 +352,11 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20700637" sideWeight="0.7957317" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17834395" sideWeight="0.7957317" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -360,21 +412,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/world_svg_paths.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="80383" selection-start="24265" selection-end="80383" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/inBGD.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generated/inCHN.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="197" selection-start="197" selection-end="197" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/code_to_name.json">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="841" selection-start="836" selection-end="841" vertical-scroll-proportion="0.0" />
@@ -385,77 +422,84 @@
         <state line="0" column="75" selection-start="75" selection-end="75" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/arrowcomputer2.py">
+    <entry file="file://$PROJECT_DIR$/hasher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="28" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/geojsontosvg.py">
+    <entry file="file://$PROJECT_DIR$/geoloc.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="38" selection-end="213" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/parser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="34" selection-start="879" selection-end="879" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="0" selection-start="473" selection-end="503" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="3964" column="39" selection-start="123128" selection-end="123128" vertical-scroll-proportion="0.43548387" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CNAME">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
+        <state line="0" column="17" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/source.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="0" selection-start="473" selection-end="503" vertical-scroll-proportion="0.25" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="8" selection-start="1992" selection-end="1993" vertical-scroll-proportion="0.33190578" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LICENSE">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/parser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="34" selection-start="879" selection-end="879" vertical-scroll-proportion="-0.43204868" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/geojsontosvg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="38" selection-end="213" vertical-scroll-proportion="0.15212981" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="233" selection-end="233" vertical-scroll-proportion="-6.875">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hasher.js">
+    <entry file="file://$PROJECT_DIR$/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LICENSE">
+    <entry file="file://$PROJECT_DIR$/arrowcomputer2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="36" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+        <state line="25" column="23" selection-start="1104" selection-end="1104" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.css">
+    <entry file="file://$PROJECT_DIR$/jquery-ui-1.8.16.custom/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="8" selection-start="1992" selection-end="1993" vertical-scroll-proportion="-5.9615383">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/geoloc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3964" column="39" selection-start="123128" selection-end="123128" vertical-scroll-proportion="-7.269231">
+        <state line="242" column="24" selection-start="24785" selection-end="24796" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cache.manifest">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="10" selection-start="567" selection-end="567" vertical-scroll-proportion="-11.538462">
+        <state line="1" column="7" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.5769231">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="55" selection-start="2532" selection-end="2532" vertical-scroll-proportion="0.18536586">
+        <state line="393" column="0" selection-start="16366" selection-end="16366" vertical-scroll-proportion="0.7606383">
           <folding />
         </state>
       </provider>

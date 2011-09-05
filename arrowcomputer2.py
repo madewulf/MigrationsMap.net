@@ -23,9 +23,10 @@ def create_country_json(country_code,matrix,ccode_to_coordinates,file_prefix="in
         try:
             xm = middle_point[0]
             ym = middle_point[1]
+            d_div = 5.0
             p = (xy_from[0] - xy_to[0])/((xy_from[1] - xy_to[1])*1.0)
             alpha = math.atan(p)
-            d_div = 5.0
+
             x1 = xm + math.cos(alpha) * d/d_div
             y1 = ym - math.sin(alpha) * d/d_div
             x2 = xm - math.cos(alpha) * d/d_div
@@ -35,7 +36,7 @@ def create_country_json(country_code,matrix,ccode_to_coordinates,file_prefix="in
         except Exception, e:
             print e
             x1 = middle_point[0]
-            y1 = middle_point[1]+d
+            y1 = middle_point[1]-d/d_div
         svg_path = "M %s %s" %(lolatoxy(from_point)) + " Q %s %s "% (x1,y1) +"%s %s" %(lolatoxy(point))
         #print svg_path
         res[code]=(svg_path,name, migration)
