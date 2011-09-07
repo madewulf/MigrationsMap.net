@@ -2,9 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7e36eec-8b8b-4db6-9ec4-a841a0f638cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cache.manifest" afterPath="$PROJECT_DIR$/cache.manifest" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/geoloc.json" afterPath="$PROJECT_DIR$/geoloc.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/code_to_coordinates.json" afterPath="$PROJECT_DIR$/code_to_coordinates.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inARM.json" afterPath="$PROJECT_DIR$/generated/inARM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inAZE.json" afterPath="$PROJECT_DIR$/generated/inAZE.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/inGEO.json" afterPath="$PROJECT_DIR$/generated/inGEO.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outARM.json" afterPath="$PROJECT_DIR$/generated/outARM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outAZE.json" afterPath="$PROJECT_DIR$/generated/outAZE.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outBLR.json" afterPath="$PROJECT_DIR$/generated/outBLR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outCYP.json" afterPath="$PROJECT_DIR$/generated/outCYP.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outGEO.json" afterPath="$PROJECT_DIR$/generated/outGEO.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outGRC.json" afterPath="$PROJECT_DIR$/generated/outGRC.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outLVA.json" afterPath="$PROJECT_DIR$/generated/outLVA.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outRUS.json" afterPath="$PROJECT_DIR$/generated/outRUS.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/generated/outUKR.json" afterPath="$PROJECT_DIR$/generated/outUKR.json" />
     </list>
     <ignored path="migrationmap.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,7 +86,7 @@
       <file leaf-file-name="geoloc.json" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/geoloc.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3983" column="39" selection-start="123766" selection-end="123766" vertical-scroll-proportion="0.82718897">
+            <state line="3983" column="39" selection-start="123766" selection-end="123766" vertical-scroll-proportion="0.6320422">
               <folding />
             </state>
           </provider>
@@ -322,7 +333,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20426829" sideWeight="0.99525315" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -473,7 +484,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/geoloc.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3983" column="39" selection-start="123766" selection-end="123766" vertical-scroll-proportion="0.82718897">
+        <state line="3983" column="39" selection-start="123766" selection-end="123766" vertical-scroll-proportion="0.6320422">
           <folding />
         </state>
       </provider>
