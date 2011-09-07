@@ -66,12 +66,14 @@ body {
     font-size:0.8em;
     background-opacity: 0.5;
     color: black;
+    cursor: move;
 }
 
 #geoloc_me {
     position : absolute;
     top: 285px;
     left: 10px;
+    cursor : pointer;
 }
 #social {
     position : absolute;
@@ -198,4 +200,24 @@ td {
 td.country_name{
     height: 1.5em;
     padding-left:1em;
+}
+
+#progressbar {
+    height : 1em;
+    position:absolute;
+    witdth: 350px;
+    top: 623px;
+    left : 476px;
+    width: 450px;
+}
+#progressbarMessage {
+    height : 1em;
+    position:absolute;
+    witdth: 350px;
+    top: 625px;
+    left : 481px;
+    width: 450px;
+    font-size: 0.75em;
+    text-align: center;
+
 }

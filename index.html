@@ -47,6 +47,8 @@
 <body>
 
 <div id="container">
+
+
 <div id="title">
     <h1 style="color:white;">MigrationsMap.net</h1>
     <p style="font-size:13px;padding: 2px 0px 0px 0px;">Where are migrants coming from? Where have migrants left?</p>
@@ -151,20 +153,7 @@
             $("#"+other_direction).addClass("on")
         }
         
-        if (window.applicationCache){
-            var fileCounter=0;
-            var progressBar = $("#progressbar");
-            window.applicationCache.onprogress = function(event){
-                console.log(event);
-                fileCounter++;
-                progressBar.progressbar({
-					    value: fileCounter/4
-				});
-            }
-            window.applicationCache.oncached = function(event){
-                alert("The application is now ready to be used off-line. You can type the url and access the map even without internet access.")
-            };
-        }
+
 
         
         function color_country(country,color,strokeColor)
@@ -361,6 +350,30 @@
             );
             $('#legend').draggable();
 
+            var progressBar = $("#progressbar");
+
+            if (window.applicationCache){
+                var fileCounter=0;
+
+                window.applicationCache.onprogress = function(event){
+                    fileCounter++;
+                    progressBar.progressbar({
+                            value: fileCounter/4.77
+                    });
+                    $("#progressbarMessage").html((fileCounter/4.77).toFixed(0) + "% downloaded");
+                }
+                window.applicationCache.oncached = function(event){
+                    $("#progressbarMessage").html("Off-line cache ready. You can now access the site without internet connection.")
+                };
+                window.applicationCache.onnoupdate = function(event){
+                    progressBar.progressbar({
+                                value: 100
+                        });
+                    $("#progressbarMessage").html("Cache up-to-date. You can access the site without internet connection.")
+
+                }
+            }
+
         });
         var the_regexp = /^([^\/\?]+)\/?(\w*)$/i;
 
@@ -390,8 +403,8 @@
 <div id="geoloc_me" class="ui-state-default ui-corner-all">
     <span title="Where am I?" class="ui-icon ui-icon-home"></span>
 </div>
-<div id="progressbar" style="height: 1em;"></div>
-
+<div id="progressbar"></div>
+<div id="progressbarMessage"></div>
 </div>
 
 </body>
