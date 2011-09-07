@@ -107,8 +107,12 @@
         function lolatoxy(point){
             var lo = point.longitude;
             var la = point.latitude;
+            //lo = -122.18994140625; // SF
+            //la = 37.33522435930639;
+            //lo = 23.5546875; //south of south-africa
+            //la = -37.33522435930639;
             var x = (lo+180) * (1200 / 360.0);
-            var y = (180 - (la+90)) *  (600.0 / 180.0);
+            var y = (180 - (la+90)) *  (700.0 / 180.0); 
             return {"x":Math.floor(x),
                     "y":Math.floor(y)
             };
