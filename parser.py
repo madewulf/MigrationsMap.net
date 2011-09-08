@@ -29,7 +29,10 @@ def load_matrices():
     code_to_name = OrderedDict()
     for name in sorted_names:
         code_to_name[name_to_code[name]]=name
-
+        
+    f = open("name_to_code.json",'w')
+    f.write(json.dumps(name_to_code))
+    f.close()
 
     reversed_matrix = defaultdict(lambda: {})
     for fro in matrix :
@@ -69,8 +72,8 @@ def geolocalize_the_world():
 
 if __name__ =="__main__":
     matrix, reversed_matrix, code_to_name = load_matrices()
-    print code_to_name
-    
+
+
     f = open('code_to_name.json','w')
 
     code_to_name["WSAHARA"]="Western Sahara",

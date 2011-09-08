@@ -99,6 +99,7 @@ body {
     left: 10px;
 
     display:none;
+    z-index: 102;
 
 }
 #country_select_div
@@ -117,6 +118,7 @@ body {
     position:absolute;
     left: 958px;
     top: 615px;
+    z-index:100;
 }
 
 h2 {
@@ -220,4 +222,20 @@ td.country_name{
     font-size: 0.75em;
     text-align: center;
 
+}
+
+#popup_country_name{
+    display:block;
+    font-size: 1.4em;
+    padding-bottom:4px;
+    margin-bottom:4px;
+    border-bottom: 1px solid black;
+    width:250px;
+}
+
+#country_name_popup th{
+    text-align: right;
+}
+#country_name_popup th{
+    text-align: left;
 }

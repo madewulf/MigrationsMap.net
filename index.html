@@ -36,13 +36,13 @@
   })();
 
 </script>
-<script type="text/javascript">
+<!--<script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
-</script>
+</script>-->
 </head>
 <body>
 
@@ -86,6 +86,13 @@
         var code_to_coordinates;
         var userLatitude;
         var userLongitude;
+        var GDP ={};
+        var HIV = {};
+        var POP = {};
+        var TUBERCULOSIS = {};
+        var UNDER_FIVE_MORTALITY = {};
+        var container ;
+
         function parseHash(hash, redrawing){
             res = the_regexp.exec(hash);
             if (res)
@@ -203,11 +210,24 @@
             return function(event){
                 color_country(country,selected_color);
                 var country_name =  $("#country_name_popup");
+
                 country_name.empty();
-                country_name.append(code_to_name[country]);
+                country_name.append("<span id='popup_country_name'> "+code_to_name[country] + "</span><table>");
+                country_name.append("<tr><th>Population</th><td style='text-align:right;'>" + insertDecimalPoints(parseFloat(POP[country]).toFixed(0)))+'</td></tr>';
+                country_name.append("<tr><th>GDP per capita</th><td style='text-align:right;'>" + insertDecimalPoints(parseFloat(GDP[country]).toFixed(0))+' $</td></tr>');
+                country_name.append("<tr><th>HIV Prevalence (age 15-49)</th><td style='text-align:right;'>" + HIV[country]+' %</td></tr>');
+                country_name.append("<tr><th>Tuberculosis Prevalence</th><td style='text-align:right;'>" + parseFloat(TUBERCULOSIS[country]/1000).toFixed(2)+' %</td></tr>');
+                country_name.append("<tr><th>Mortality under Five</th><td style='text-align:right;'>" + parseFloat(UNDER_FIVE_MORTALITY[country]/10).toFixed(2)+' %</td></tr></table>' );
+
+
                 country_name.css("display","block");
-                country_name.css("top",event.clientY);
-                country_name.css("left",Math.min(event.clientX-30,1100));
+                var base_x  = container.offset().left;
+                var base_y = container.offset().top;
+                if (event.clientY<500)
+                    country_name.css("top",base_y+event.clientY);
+                else
+                    country_name.css("top",base_y+event.clientY-180);
+                country_name.css("left",Math.min(base_x+event.clientX-30,base_x+1200-250));
             }
         }
         function insertDecimalPoints(s)
@@ -308,7 +328,23 @@
             });
              $.getJSON("name_to_code.json", function(data) {
                  name_to_code = data;
-             };
+             });
+             $.getJSON("GDP.json", function(data) {
+                 GDP = data;
+             });
+            $.getJSON("HIV.json", function(data) {
+                 HIV = data;
+             });
+            $.getJSON("TUBERCULOSIS.json", function(data) {
+                 TUBERCULOSIS = data;
+             });
+            $.getJSON("UNDER-FIVE-MORTALITY.json", function(data) {
+                 UNDER_FIVE_MORTALITY = data;
+             });
+            $.getJSON("POP.json", function(data) {
+                 POP = data;
+             });
+
              $.getJSON("code_to_name.json", function(data) {
                  code_to_name = data;
                  var country_select = $("#country_select");
@@ -333,6 +369,7 @@
 
         });
         $(function(){
+            container = $("#container");
             $("#in").click(function(e){
                e.preventDefault();
                direction='out';
