@@ -5,6 +5,8 @@ jquery-ui-1.8.16.custom/js/jquery-1.6.2.min.js
 jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js
 jquery-ui-1.8.16.custom/css/ui-darkness/jquery-ui-1.8.16.custom.css
 jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-icons_cccccc_256x240.png
+jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-icons_ffffff_256x240.png
+jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-bg_glass_40_0078a3_1x400.png
 /jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-bg_glass_20_555555_1x400.png
 modernizr.geoloc.js
 main.css

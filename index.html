@@ -82,6 +82,7 @@
         var border_color = "#999";
         var arrow_color = "#009CFF"//"#add8e6"; //"#fafad2";
         var code_to_name ;
+        var name_to_code;
         var code_to_coordinates;
         var userLatitude;
         var userLongitude;
@@ -305,6 +306,9 @@
                     svg_borders[country].push(line);
                 }
             });
+             $.getJSON("name_to_code.json", function(data) {
+                 name_to_code = data;
+             };
              $.getJSON("code_to_name.json", function(data) {
                  code_to_name = data;
                  var country_select = $("#country_select");
