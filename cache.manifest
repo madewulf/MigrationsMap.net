@@ -11,6 +11,7 @@ modernizr.geoloc.js
 main.css
 world_svg_paths_by_code.json
 code_to_name.json
+name_to_code.json
 code_to_coordinates.json
 gray_texture.jpg
 right_blue_arrow.png
