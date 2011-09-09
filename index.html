@@ -212,12 +212,36 @@
                 var country_name =  $("#country_name_popup");
 
                 country_name.empty();
-                country_name.append("<span id='popup_country_name'> "+code_to_name[country] + "</span><table>");
-                country_name.append("<tr><th>Population</th><td style='text-align:right;'>" + insertDecimalPoints(parseFloat(POP[country]).toFixed(0)))+'</td></tr>';
-                country_name.append("<tr><th>GDP per capita</th><td style='text-align:right;'>" + insertDecimalPoints(parseFloat(GDP[country]).toFixed(0))+' $</td></tr>');
-                country_name.append("<tr><th>HIV Prevalence (age 15-49)</th><td style='text-align:right;'>" + HIV[country]+' %</td></tr>');
-                country_name.append("<tr><th>Tuberculosis Prevalence</th><td style='text-align:right;'>" + parseFloat(TUBERCULOSIS[country]/1000).toFixed(2)+' %</td></tr>');
-                country_name.append("<tr><th>Mortality under Five</th><td style='text-align:right;'>" + parseFloat(UNDER_FIVE_MORTALITY[country]/10).toFixed(2)+' %</td></tr></table>' );
+                country_name.append("<span id='popup_country_name'> "+code_to_name[country] + "</span><table width='100%'>");
+                var pop = insertDecimalPoints(parseFloat(POP[country]).toFixed(0));
+                if (!pop)
+                    pop = "no data";
+                
+                country_name.append("<tr><th>Population</th><td style='text-align:right;'>" + pop+'</td></tr>');
+                var gdp = insertDecimalPoints(parseFloat(GDP[country]).toFixed(0)) ;
+                if (gdp)
+                    gdp = gdp + ' $';
+                else
+                    gdp ="no data";
+                country_name.append("<tr><th>GDP per capita</th><td style='text-align:right;'>" + gdp+'</td></tr>');
+                var hiv = HIV[country];
+                if (hiv)
+                    hiv = hiv + ' %';
+                else
+                    hiv = "no data"
+                country_name.append("<tr><th>HIV Prevalence (age 15-49)</th><td style='text-align:right;'>" + hiv+'</td></tr>');
+                var tb = parseFloat(TUBERCULOSIS[country]/1000).toFixed(2);
+                if (tb)
+                    tb = tb + ' %';
+                else
+                    tb = "no data";
+                country_name.append("<tr><th>Tuberculosis Prevalence</th><td style='text-align:right;'>" + tb +'</td></tr>');
+                var mortality =  parseFloat(UNDER_FIVE_MORTALITY[country]/10).toFixed(2);
+                if (mortality)
+                    mortality = mortality + ' %';
+                else
+                    mortality = "no data";
+                country_name.append("<tr><th>Mortality under Five</th><td style='text-align:right;'>" +mortality+'</td></tr></table>' );
 
 
                 country_name.css("display","block");
@@ -226,8 +250,8 @@
                 if (event.clientY<500)
                     country_name.css("top",base_y+event.clientY);
                 else
-                    country_name.css("top",base_y+event.clientY-180);
-                country_name.css("left",Math.min(base_x+event.clientX-30,base_x+1200-250));
+                    country_name.css("top",base_y+event.clientY-200);
+                country_name.css("left",Math.min(base_x+event.clientX-30,base_x+1200-290));
             }
         }
         function insertDecimalPoints(s)
@@ -395,10 +419,16 @@
             );
             $('#legend').draggable();
             $("#legend").delegate(".country_name","click",function(e){
+                previousCountry = currentCountry;
                 currentCountry = $(this).attr("value");
                 redraw();
             });
-
+            $("#legend").delegate(".country_name","mouseenter",function(e){
+                $(this).css("text-decoration","underline");
+            });
+            $("#legend").delegate(".country_name","mouseleave",function(e){
+                $(this).css("text-decoration","none");
+            });
             var progressBar = $("#progressbar");
 
             if (window.applicationCache){
@@ -407,9 +437,9 @@
                 window.applicationCache.onprogress = function(event){
                     fileCounter++;
                     progressBar.progressbar({
-                            value: fileCounter/4.77
+                            value: fileCounter/4.81
                     });
-                    $("#progressbarMessage").html((fileCounter/4.77).toFixed(0) + "% downloaded");
+                    $("#progressbarMessage").html((fileCounter/4.81).toFixed(0) + " % downloaded");
                 }
                 window.applicationCache.oncached = function(event){
                     $("#progressbarMessage").html("Off-line cache ready. You can now access the site without internet connection.")
