@@ -12,8 +12,7 @@ used to generate the JSON data files.
   In the processes of creating those matrices, two useful files are generated:
      * `code_to_name.json` a JSON object allowing to match iso country codes to country names
      * `name_to_code.json` allows the reverse translation from country names to country code
-
-  `parser.py' also contains the function `geolocalize_the_world`
+  `parser.py` also contains the function `geolocalize_the_world`
   which obtains geographic coordinates for every country of `code_to_name.json` from the Google
   geolocation api and stores it in `geoloc.json` (beware, because of some mistakes, this file
   has been manually edited after the process, for example because Georgia had been located

@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html manifest="/cache.manifest" itemscope itemtype="http://schema.org/Visualization">
+<html manifest="/cache.madnifest" itemscope itemtype="http://schema.org/Visualization">
 <head>
     <title>Migrations Map: Where are migrants coming from? Where have migrants left? </title>
     <meta property="og:title" content="MigrationsMap.net"/>
@@ -281,7 +281,7 @@
                     var l;
                     var path;
                     line = paper.path(val[0]);
-                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td class='country_name'>"+val[1]+'</td><td style="text-align: right;">'+insertDecimalPoints(val[2])+"</td></tr>")
+                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td class='country_name' value='"+name_to_code[val[1]] +"'>"+val[1]+'</td><td style="text-align: right;">'+insertDecimalPoints(val[2])+"</td></tr>")
                     line.attr({stroke:arrow_color,'stroke-width':2,'opacity':0});
                     line.animate({stroke:arrow_color,'stroke-width':2,'opacity':1},333);
                     current_arrows.push(line);
@@ -394,6 +394,10 @@
                 function() { $(this).removeClass('ui-state-hover'); }
             );
             $('#legend').draggable();
+            $("#legend").delegate(".country_name","click",function(e){
+                currentCountry = $(this).attr("value");
+                redraw();
+            });
 
             var progressBar = $("#progressbar");
 

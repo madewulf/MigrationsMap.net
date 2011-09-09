@@ -202,6 +202,11 @@ td {
 td.country_name{
     height: 1.5em;
     padding-left:1em;
+
+}
+
+#legend .country_name{
+  cursor: pointer;
 }
 
 #progressbar {
