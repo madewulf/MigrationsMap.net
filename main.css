@@ -94,9 +94,7 @@ body {
     padding: 10px;
     font-size:0.8em;
 
-    position:absolute;
-    top: 280px;
-    left: 10px;
+    position:fixed;
 
     display:none;
     z-index: 102;
@@ -236,6 +234,7 @@ td.country_name{
     margin-bottom:4px;
     border-bottom: 1px solid black;
     width:250px;
+
 }
 
 #country_name_popup th{

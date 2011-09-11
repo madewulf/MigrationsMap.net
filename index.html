@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html manifest="/cache.manifest" itemscope itemtype="http://schema.org/Visualization">
+<html manifest="/cache.madnifest" itemscope itemtype="http://schema.org/Visualization">
 <head>
     <title>Migrations Map: Where are migrants coming from? Where have migrants left? </title>
     <meta property="og:title" content="MigrationsMap.net"/>
@@ -245,13 +245,14 @@
 
 
                 country_name.css("display","block");
-                var base_x  = container.offset().left;
-                var base_y = container.offset().top;
-                if (event.clientY<500)
-                    country_name.css("top",base_y+event.clientY);
+                var canvasContainer = $("#canvas_container");
+                var canvasTop = canvasContainer.offset().top;
+                var canvasLeft = canvasContainer.offset().left;
+                if (event.pageY<canvasTop+500)
+                    country_name.css("top",event.pageY);
                 else
-                    country_name.css("top",base_y+event.clientY-200);
-                country_name.css("left",Math.min(base_x+event.clientX-30,base_x+1200-290));
+                    country_name.css("top",event.pageY-170);
+                country_name.css("left",Math.min(event.pageX,canvasLeft+1200-290));
             }
         }
         function insertDecimalPoints(s)
