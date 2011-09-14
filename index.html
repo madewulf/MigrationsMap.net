@@ -443,7 +443,7 @@
                     $("#progressbarMessage").html((fileCounter/4.82).toFixed(0) + " % downloaded");
                 }
                 window.applicationCache.oncached = function(event){
-                    $("#progressbarMessage").html("Off-line cache ready. You can now access the site without internet connection.")
+                    $("#progressbarMessage").html("Offline cache ready. You can now access the site without internet connection.")
                 };
                 window.applicationCache.onnoupdate = function(event){
                     progressBar.progressbar({
@@ -452,11 +452,24 @@
                     $("#progressbarMessage").html("Cache up-to-date. You can access the site without internet connection.")
 
                 }
+                window.applicationCache.onupdateready = function(event){
+                    progressBar.progressbar({
+                                value: 100
+                        });
+                    window.applicationCache.swapCache();
+                    //$("#progressbarMessage").html("Cache up-to-date. A new version of the site is now available offline.")
+                }
+                window.applicationCache.onerror = function(event){
+                    progressBar.progressbar({
+                                value: 100
+                        });
+                    $("#social").hide();
+                    $("#progressbarMessage").html("You're currently using the site offline.")
+                }
             }
 
         });
         var the_regexp = /^([^\/\?]+)\/?(\w*)$/i;
-
 
         hasher.initialized.add(parseHash);
         hasher.changed.add(parseHash, true);
