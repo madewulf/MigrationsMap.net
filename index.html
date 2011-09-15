@@ -23,26 +23,26 @@
     <script type="text/javascript" src="hasher.js"></script>
     <script type="text/javascript" src="modernizr.geoloc.js"></script>
     <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-1397562-10']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
 <script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-1397562-10']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<!--<script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
     po.src = 'https://apis.google.com/js/plusone.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
   })();
-</script>-->
+</script>
 </head>
 <body>
 
@@ -52,11 +52,11 @@
 <div id="title">
     <h1 style="color:white;">MigrationsMap.net</h1>
     <p style="font-size:13px;padding: 2px 0px 0px 0px;">Where are migrants coming from? Where have migrants left?</p>
-
 </div>
+
 <div id="social">
 <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmigrationsmap.net&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; padding-top:10px;" allowTransparency="true"></iframe>
-<!--<g:plusone size="medium"></g:plusone>-->
+<div id="plusone"><g:plusone size="medium"></g:plusone></div>
 </div>
 <div id="country_select_div">
     <span id="explanation">Click on the map or pick a country here:</span>
@@ -74,8 +74,8 @@
         var current_arrows=[];
         var current_countries=[];
         var currentCircles=[];
-        var currentCountry="BEL";
-        var previousCountry = "BEL";
+        var currentCountry="USA";
+        var previousCountry = "USA";
         var direction = "out";
         var unselected_color = "#515151";
         var selected_color = "#999";//"#67E667" ;//"#87ceeb";
@@ -220,7 +220,7 @@
                 country_name.append("<tr><th>Population</th><td style='text-align:right;'>" + pop+'</td></tr>');
                 var gdp = insertDecimalPoints(parseFloat(GDP[country]).toFixed(0)) ;
                 if (gdp)
-                    gdp = gdp + ' $';
+                    gdp = '$ '+gdp;
                 else
                     gdp ="no data";
                 country_name.append("<tr><th>GDP per capita</th><td style='text-align:right;'>" + gdp+'</td></tr>');
@@ -296,9 +296,16 @@
         {
 
             $.getJSON("generated/"+direction+currentCountry+".json", function(data) {
-                $("#countries").empty();
-                $("#country_name").empty()
-                $("#country_name").append(code_to_name[currentCountry]);
+                var countries_div = $("#countries");
+                var country_name_div = $("#country_name");
+                countries_div.empty();
+                country_name_div.empty()
+                country_name_div.append(code_to_name[currentCountry]);
+                $("#popsize").empty();
+                var popsize = insertDecimalPoints(parseFloat(POP[currentCountry]).toFixed(0));
+                popsize = "Pop: "+popsize;
+                if (popsize)
+                    $("#popsize").append(popsize);
                 var counter =0;
                 $.each(data, function(country, val) {
                     var line;
@@ -306,7 +313,7 @@
                     var l;
                     var path;
                     line = paper.path(val[0]);
-                    $("#countries").append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td class='country_name' value='"+name_to_code[val[1]] +"'>"+val[1]+'</td><td style="text-align: right;">'+insertDecimalPoints(val[2])+"</td></tr>")
+                    countries_div.append("<tr><td><div class=color_span style='height:1em;width:1em;background-color:"+ten_colors[counter] +" '>&nbsp;&nbsp;&nbsp;</div></td><td class='country_name' value='"+name_to_code[val[1]] +"'>"+val[1]+'</td><td style="text-align: right;">'+insertDecimalPoints(val[2])+"</td></tr>")
                     line.attr({stroke:arrow_color,'stroke-width':2,'opacity':0});
                     line.animate({stroke:arrow_color,'stroke-width':2,'opacity':1},333);
                     current_arrows.push(line);
@@ -394,6 +401,8 @@
 
         });
         $(function(){
+            if (!Modernizr.geolocation)
+                $("#geoloc_me").hide();
             container = $("#container");
             $("#in").click(function(e){
                e.preventDefault();
@@ -479,6 +488,8 @@
 <div id="legend">
     <h2 id="country_name">
     </h2>
+    <h3 id="popsize">
+    </h3>
         <table id="countries" width="100%">
         </table>
 </div>
@@ -491,7 +502,7 @@
   </div>
 
 <div id="credits">
-      Visualization by <a href="http://twitter.com/madewulf">Martin De Wulf</a>  based on <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">the Global Migrant Origin Database</a> Version 4 (updated March 2007) - <a href="http://multitasked.net/migrationsmap.net">Learn more</a>
+      Visualization by <a href="http://twitter.com/madewulf">Martin De Wulf</a>  based on <a href="http://www.migrationdrc.org/research/typesofmigration/global_migrant_origin_database.html">the Global Migrant Origin Database</a> Version 4 (updated March 2007) - <a href="about.html">Learn more</a>
 </div>
 <div id="geoloc_me" class="ui-state-default ui-corner-all">
     <span title="Where am I?" class="ui-icon ui-icon-home"></span>

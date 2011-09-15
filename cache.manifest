@@ -1,12 +1,12 @@
 CACHE MANIFEST
-#rev 28
+#rev 29
 raphael.js
 jquery-ui-1.8.16.custom/js/jquery-1.6.2.min.js
 jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js
 jquery-ui-1.8.16.custom/css/ui-darkness/jquery-ui-1.8.16.custom.css
 jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-icons_cccccc_256x240.png
 jquery-ui-1.8.16.custom/css/ui-darkness/images/ui-icons_ffffff_256x240.png
-
+https://apis.google.com/js/plusone.js
 modernizr.geoloc.js
 main.css
 world_svg_paths_by_code.json
