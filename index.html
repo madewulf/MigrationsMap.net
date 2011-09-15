@@ -447,9 +447,9 @@
                 window.applicationCache.onprogress = function(event){
                     fileCounter++;
                     progressBar.progressbar({
-                            value: fileCounter/4.82
+                            value: fileCounter/4.84
                     });
-                    $("#progressbarMessage").html((fileCounter/4.82).toFixed(0) + " % downloaded");
+                    $("#progressbarMessage").html((fileCounter/4.84).toFixed(0) + " % downloaded");
                 }
                 window.applicationCache.oncached = function(event){
                     $("#progressbarMessage").html("Offline cache ready. You can now access the site without internet connection.")
