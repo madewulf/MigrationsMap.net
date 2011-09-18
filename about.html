@@ -40,9 +40,9 @@
             providing countries of lifetime migrants to X or the top ten receiving countries of lifetime migrants from
             X. On
             top of that, when you let your mouse hover over a country, you can see the total population, the GDP per capita,
-            the HIV and Tuberculosis prevalences and the death rate of children under five</p>
+            the HIV and Tuberculosis prevalences and the death rate of children under five.</p>
 
-        <p>I (<a href="http://twitter.com/madewulf">Martin</a> <a href="http://twitter.com/madewulf">De Wulf</a>) have
+        <p>I (<a href="http://twitter.com/madewulf">Martin</a> <a href="http://multitasked.net">De Wulf</a>) have
             been
             programming this map to
             learn
@@ -65,13 +65,13 @@
                 in a country X and now living in
                 country Y." Globally, the map is only as good as this data is and it is quite clear, even for a non
                 specialist like me, that
-                obtaining accurate number on such topic is really difficult: you have to use many different sources with
+                obtaining accurate numbers on such a topic is really difficult: you have to use many different sources with
                 different
-                counting criteria, and for some country, it would probably be better politically not to give the precise
+                counting criteria, and for some countries, it would probably be better politically not to give the precise
                 numbers.
                 So, take the map with a grain of salt.
             </li>
-            <li>For all the indicator (population size, GDP, HIV and tuberculosis prevalence and mortality for kids under five years old), I
+            <li>For all the indicators (population size, GDP, HIV and tuberculosis prevalences and mortality for kids under five years old), I
                 used the  <a href="http://data.worldbank.org/developers/api-overview">World Bank API</a>, with the numbers for 2007.
             </li>
             <li>
@@ -82,19 +82,19 @@
         </ol>
         <h2>The Technology</h2>
         <p> All the code of the site and the scripts used to produce it are available on
-        <a href="https://github.com/madewulf/MigrationsMap.net">github</a>. Furthermore, the site is hosted on a <a href="http://pages.github.com/">githup page</a>. Thanks to them for this
+        <a href="https://github.com/madewulf/MigrationsMap.net">github</a>. Furthermore, the site is hosted on a <a href="http://pages.github.com/">github page</a>. Thanks to them for this
         fantastic free service.</p>
 
         <p> There are probably some bugs lurking around. Do not hesitate to report them to me at: madewulf@gmail.com.</p>
         <p>Here is a non exhaustive list of technologies or tools employed to create this map:
         <ul>
 
-        <li><a href="http://raphaeljs.com/">Raphael.js</a> for displaying in <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> the countries borders, the "arrows" and animating everything, all </li>
-        <li>For the red hues used to display "migration intensity", I used  the <a href="http://colorbrewer2.org/">Color Brewer</a> by Cynthia Brewer;</li>
-         <li>The font is <a href="http://ospublish.constantvzw.org/foundry/univers-else/">Univers Else</a> (I may have put it to bad use... not sure, I am not a type geek);</li>
-         <li><a href="http://python.org">Python</a> has been used, with the <a href="http://docs.python-requests.org/en/latest/index.html">Requests</a> library
+        <li><a href="http://raphaeljs.com/">Raphael.js</a> for the display in <a href="http://en.wikipedia.org/wiki/Scalable_Vector_Graphics">SVG</a> the countries borders, the "arrows" and animating everything; </li>
+        <li><a href="http://colorbrewer2.org/">Color Brewer</a> by Cynthia Brewer for the red hues used to display "migration intensity";</li>
+         <li>the font <a href="http://ospublish.constantvzw.org/foundry/univers-else/">Univers Else</a>. I may have put it to bad use. I am not sure, I am not a type geek;</li>
+         <li><a href="http://python.org">Python</a> with the <a href="http://docs.python-requests.org/en/latest/index.html">Requests</a> library
            to transform all data in a format usable on this site and to access the <a href="http://data.worldbank.org/developers/api-overview">World Bank API</a>;</li>
-        <li><a href="https://github.com/millermedeiros/Hasher">Hasher.js</a> for the url hashes manipulation (so that people can bookmark maps, or use their back button);</li>
+        <li><a href="https://github.com/millermedeiros/Hasher">Hasher.js</a> for the url hashes manipulations (so that people can bookmark maps, or use their back button);</li>
         <li><a href="http://www.modernizr.com/">Modernizr</a> for detecting if the current browser supports  geolocation;</li>
         <li><a href="http://jquery.com/">JQuery</a>.</li>
         </ul>
@@ -102,9 +102,12 @@
         <h2>What's next?</h2>
         <p>If you liked the map, you might also like <a href="http://populationpyramid.net">PopulationPyramid.net</a></p>
         <div id="social">
-<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmigrationsmap.net&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; padding-top:10px;" allowTransparency="true"></iframe>
-<div id="plusone"><g:plusone href="http://migrationsmap.net" size="medium"></g:plusone></div>
-</div>
+        <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fmigrationsmap.net&amp;send=false&amp;layout=button_count&amp;width=100&amp;show_faces=true&amp;action=like&amp;colorscheme=dark&amp;font=arial&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px; padding-top:10px;" allowTransparency="true"></iframe>
+        <div id="plusone"><g:plusone href="http://migrationsmap.net" size="medium"></g:plusone></div>
+        <div>
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://migrationsmap.net" data-text="Where are migrants coming from? Where have migrants left?" data-count="horizontal" data-via="madewulf">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+        </div>
+        </div>
 
     </div>
 </div>
