@@ -80,7 +80,7 @@ if __name__ =="__main__":
 
     f.write(json.dumps(code_to_name))
     f.close()
-    #print get_sorted_tuples(matrix,"FRA", code_to_name)
-    #print get_sorted_tuples(reversed_matrix,"FRA",code_to_name)
+    print get_sorted_tuples(matrix,"MEX", code_to_name)
+    print get_sorted_tuples(reversed_matrix,"MEX",code_to_name)
 
 
