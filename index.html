@@ -304,8 +304,9 @@
                 country_name_div.append(code_to_name[currentCountry]);
                 $("#popsize").empty();
                 var popsize = insertDecimalPoints(parseFloat(POP[currentCountry]).toFixed(0));
-                popsize = "Pop: "+popsize;
-                if (popsize)
+                if (popsize!="NaN")
+                    popsize = "Pop: "+popsize;
+                if (popsize )
                     $("#popsize").append(popsize);
                 var counter =0;
                 $.each(data, function(country, val) {
