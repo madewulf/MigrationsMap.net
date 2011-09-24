@@ -214,30 +214,31 @@
                 country_name.empty();
                 country_name.append("<span id='popup_country_name'> "+code_to_name[country] + "</span><table width='100%'>");
                 var pop = insertDecimalPoints(parseFloat(POP[country]).toFixed(0));
-                if (!pop)
+                console.log(pop);
+                if (!pop || pop=="NaN")
                     pop = "no data";
                 
                 country_name.append("<tr><th>Population</th><td style='text-align:right;'>" + pop+'</td></tr>');
                 var gdp = insertDecimalPoints(parseFloat(GDP[country]).toFixed(0)) ;
-                if (gdp)
+                if (gdp && !isNaN(gdp))
                     gdp = '$ '+gdp;
                 else
                     gdp ="no data";
                 country_name.append("<tr><th>GDP per capita</th><td style='text-align:right;'>" + gdp+'</td></tr>');
                 var hiv = HIV[country];
-                if (hiv)
+                if (hiv && !isNaN(hiv))
                     hiv = hiv + ' %';
                 else
                     hiv = "no data"
                 country_name.append("<tr><th>HIV Prevalence (age 15-49)</th><td style='text-align:right;'>" + hiv+'</td></tr>');
                 var tb = parseFloat(TUBERCULOSIS[country]/1000).toFixed(2);
-                if (tb)
+                if (tb && !isNaN(tb))
                     tb = tb + ' %';
                 else
                     tb = "no data";
                 country_name.append("<tr><th>Tuberculosis Prevalence</th><td style='text-align:right;'>" + tb +'</td></tr>');
                 var mortality =  parseFloat(UNDER_FIVE_MORTALITY[country]/10).toFixed(2);
-                if (mortality)
+                if (mortality && !isNaN(mortality))
                     mortality = mortality + ' %';
                 else
                     mortality = "no data";
