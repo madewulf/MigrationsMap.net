@@ -1,7 +1,7 @@
 MigrationsMap.net
 =================
 
-This is the code of the site [http://migrationsmap.net](http://migrationsmap.net), including the scripts
+This is the code of the site [http://madewulf.github.io/MigrationsMap.net/#/USA/arrivals](http://madewulf.github.io/MigrationsMap.net/#/USA/arrivals) (previously at: [http://migrationsmap.net](http://migrationsmap.net)), including the scripts
 used to generate the JSON data files.
 
 The code is under MIT license.
